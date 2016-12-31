@@ -1,0 +1,55 @@
+{
+  "name": "euler",
+  "version": "1.0.0",
+  "description": "Project Euler - ES6",
+  "main": "index.js",
+  "author": {
+    "name": "vanita5",
+    "email": "mail@vanit.as"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.16.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-xo": "^0.14.0"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "xo": {
+    "space": 4,
+    "esnext": true,
+    "envs": [
+      "es6"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "curly": [
+        "error",
+        "multi-line"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "no-div-regex": "warn",
+      "operator-linebreak": [
+        "error",
+        "after",
+        {
+          "overrides": {
+            "?": "ignore",
+            ":": "ignore"
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "gulp-clean": "^0.3.2"
+  }
+}
