@@ -1,10 +1,11 @@
 # Project Euler in ES6/next
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
+[![Project Euler Progress Badge](https://projecteuler.net//profile/vanita5.png)](https://projecteuler.net/progress=vanita5)
+
 See [ProjectEuler.net](https://projecteuler.net/)
 
 
-My Profile: [vanita5](https://projecteuler.net/progress=vanita5)
 
 Project Euler Friend Key: 981248_jX5UzOTAtAwZI8yusZUPvwtTOfR8JNYs
 
