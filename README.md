@@ -15,6 +15,10 @@ I'll try to solve as many problems from project Euler as possible until the next
 
 Wanna join for fun?
 
+#### Competitors
+
+* [weiland](https://github.com/weiland/ex_euler)
+
 ## License
 [![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)]
 
