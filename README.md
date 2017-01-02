@@ -14,3 +14,8 @@ Project Euler Friend Key: 981248_jX5UzOTAtAwZI8yusZUPvwtTOfR8JNYs
 I'll try to solve as many problems from project Euler as possible until the next Chaos Communication Congress (34C3) in Dec 2017.
 
 Wanna join for fun?
+
+## License
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)]
+
+Do What the Fuck You Want to Public License
