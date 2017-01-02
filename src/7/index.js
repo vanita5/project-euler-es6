@@ -27,4 +27,4 @@ const nthPrime = n => {
     return p;
 };
 
-console.log(nthPrime(10001));
+console.log(`Result: ${nthPrime(10001)}`);
