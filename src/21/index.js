@@ -14,7 +14,7 @@
 
 const properDivisors = n => {
     const divisors = [];
-    for (let i = 1; i < Math.floor(Math.sqrt(n)); i++) {
+    for (let i = 1; i <= Math.floor(Math.sqrt(n)); i++) {
         if (n % i === 0) {
             divisors.push(i);
             if (n / i !== i && n / i < n) divisors.push(n / i);
