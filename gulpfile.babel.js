@@ -4,6 +4,7 @@ import babel from 'gulp-babel';
 import clean from 'gulp-clean';
 
 const paths = {
+    assets: ['src/**/*', '!src/**/*.js'],
     srcJs: 'src/**/*.js',
     buildDir: 'build',
     gulpFile: 'gulpfile.babel.js',
@@ -23,7 +24,12 @@ gulp.task('clean', () =>
         .pipe(clean())
 );
 
-gulp.task('build', ['lint'], () =>
+gulp.task('copyFiles', () =>
+    gulp.src(paths.assets)
+        .pipe(gulp.dest(paths.buildDir))
+);
+
+gulp.task('build', ['lint', 'copyFiles'], () =>
     gulp.src(paths.srcJs)
         .pipe(babel())
         .pipe(gulp.dest(paths.buildDir))
