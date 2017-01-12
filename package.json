@@ -50,6 +50,7 @@
     }
   },
   "dependencies": {
+    "bigdecimal": "^0.6.1",
     "bignum": "^0.12.5",
     "gulp-clean": "^0.3.2"
   }
