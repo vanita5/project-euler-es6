@@ -8,19 +8,10 @@
  */
 
 import bignum from 'bignum';
-
-/**
- *
- * @param n bignum
- * @return {number}
- */
-const factorial = n => {
-    if (n.eq(1)) return n;
-    return n.mul(factorial(n.sub(1)));
-};
+import BignumMathUtils from '../utils/bignum-math';
 
 const sumOfDigitsInFactorial100 = () =>
-    factorial(bignum(100))
+    BignumMathUtils.factorial(bignum(100))
         .toString()
         .split('')
         .reduce((a, b) => a + parseInt(b, 10), 0);

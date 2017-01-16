@@ -5,12 +5,12 @@
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 
-const isPalindrome = n => String(n) === String(n).split('').reverse().join('');
+import StringUtils from '../utils/string';
 
 let lpal = 0;
 for (let i = 100; i < 1000; i++) {
     for (let y = 100; y < 1000; y++) {
-        if (isPalindrome(i * y)) {
+        if (StringUtils.isPalindrome(i * y)) {
             lpal = i * y > lpal ? i * y : lpal;
         }
     }

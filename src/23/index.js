@@ -18,20 +18,11 @@
  * Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
  */
 
+import MathUtils from '../utils/math';
+
 const LIMIT = 28123;
 
-const properDivisors = n => {
-    const divisors = [];
-    for (let i = 1; i <= Math.floor(Math.sqrt(n)); i++) {
-        if (n % i === 0) {
-            divisors.push(i);
-            if (n / i !== i && n / i < n) divisors.push(n / i);
-        }
-    }
-    return divisors;
-};
-
-const abundant = n => properDivisors(n).reduce((a, b) => a + b) > n;
+const abundant = n => MathUtils.properDivisors(n).reduce((a, b) => a + b) > n;
 
 const sumsOfAbundants = () => {
     const abundants = [];

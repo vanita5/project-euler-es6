@@ -23,12 +23,7 @@
  * starting with n = 0.
  */
 
-const isPrime = n => {
-    for (let i = 2; i < Math.sqrt(n) + 1; i++) {
-        if (n % i === 0) return false;
-    }
-    return n > 1;
-};
+import MathUtils from '../utils/math';
 
 const quadraticFormula = (n, a, b) => Math.abs(Math.pow(n, 2) + (a * n) + b);
 
@@ -41,7 +36,7 @@ const maxPrimes = () => {
         for (let _b = -1000; _b <= 1000; _b++) {
             let _n;
             /* eslint-disable no-empty */
-            for (_n = 0; isPrime(quadraticFormula(_n, _a, _b)); _n++) {}
+            for (_n = 0; MathUtils.isPrime(quadraticFormula(_n, _a, _b)); _n++) {}
             if (_n > n) {
                 a = _a;
                 b = _b;

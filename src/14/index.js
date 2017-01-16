@@ -16,17 +16,13 @@
  * NOTE: Once the chain starts the terms are allowed to go above one million.
  */
 
-const collatz = (n, r = [n]) => {
-    if (n === 1) return r;
-    if (n % 2 === 0) return collatz(n / 2, [...r, ...[n / 2]]);
-    return collatz((3 * n) + 1, [...r, ...[(3 * n) + 1]]);
-};
+import MathUtils from '../utils/math';
 
 const longest = () => {
     let ls = 0;
     let lseq = 0;
     for (let i = 1; i < 1000000; i++) {
-        const c = collatz(i);
+        const c = MathUtils.collatz(i);
         if (c.length > lseq) {
             lseq = c.length;
             ls = i;

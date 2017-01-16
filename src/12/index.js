@@ -19,23 +19,12 @@
  * What is the value of the first triangle number to have over five hundred divisors?
  */
 
-const triangular = n => (n / 2) * (n + 1);
-
-const factors = n => {
-    const r = [];
-    for (let i = 1; i <= Math.floor(Math.sqrt(n)); i++) {
-        if (n % i === 0) {
-            r.push(i);
-            if (n / i !== i) r.push(n / i);
-        }
-    }
-    return r;
-};
+import MathUtils from '../utils/math';
 
 let i = 0;
 let f = [];
 while (f.length < 500) {
-    f = factors(triangular(++i));
+    f = MathUtils.factors(MathUtils.triangular(++i));
 }
 
-console.log(triangular(i));
+console.log(MathUtils.triangular(i));

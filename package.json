@@ -46,6 +46,9 @@
             ":": "ignore"
           }
         }
+      ],
+      "import/no-unresolved": [
+        "off"
       ]
     }
   },

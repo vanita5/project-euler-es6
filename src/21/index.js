@@ -12,18 +12,9 @@
  * Evaluate the sum of all the amicable numbers under 10000.
  */
 
-const properDivisors = n => {
-    const divisors = [];
-    for (let i = 1; i <= Math.floor(Math.sqrt(n)); i++) {
-        if (n % i === 0) {
-            divisors.push(i);
-            if (n / i !== i && n / i < n) divisors.push(n / i);
-        }
-    }
-    return divisors;
-};
+import MathUtils from '../utils/math';
 
-const d = n => properDivisors(n).reduce((a, b) => a + b, 0);
+const d = n => MathUtils.properDivisors(n).reduce((a, b) => a + b, 0);
 
 const sumOfAmbicleNumbers = () => {
     const ambicles = [];

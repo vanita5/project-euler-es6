@@ -7,24 +7,10 @@
  * find the sum of the even-valued terms.
  */
 
-const result = fibonaccis()
+import MathUtils from '../utils/math';
+
+const result = MathUtils.fibonaccis(4000000)
     .filter(fib => fib % 2 === 0)
     .reduce((a, b) => a + b, 0);
 
 console.log(`Result: ${result}`);
-
-/**
- * Fibonacci, recursive
- *
- * @param arr
- * @param max
- * @returns {*}
- */
-function fibonaccis(arr = [0, 1], max = 4000000) {
-    const n = arr[arr.length - 1] + arr[arr.length - 2];
-
-    if (n > max) return arr;
-
-    arr.push(n);
-    return fibonaccis(arr, max);
-}

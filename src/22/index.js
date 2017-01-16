@@ -12,18 +12,11 @@
  * What is the total of all the name scores in the file?
  */
 
-import fs from 'fs';
 import path from 'path';
 
-const FILENAME = path.join(__dirname, 'p022_names.txt');
+import FileUtils from '../utils/file';
 
-const readFile = () =>
-    new Promise((resolve, reject) =>
-        fs.readFile(FILENAME, 'utf8', (err, data) => {
-            if (err) reject(err);
-            resolve(data);
-        })
-    );
+const FILENAME = path.join(__dirname, 'p022_names.txt');
 
 const parseFile = data =>
     new Promise(resolve =>
@@ -35,7 +28,7 @@ const nameScore = (name, th) => {
 };
 
 const scores = () =>
-    readFile()
+    FileUtils.readFile(FILENAME)
         .then(parseFile)
         .then(data => {
             console.log(

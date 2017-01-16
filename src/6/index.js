@@ -14,13 +14,12 @@
  * and the square of the sum.
  */
 
-/* Array containing the first n natural numbers */
-const natNums = n => Array.from(Array(n + 1).keys()).slice(1);
+import MathUtils from '../utils/math';
 
 /* sum of the squares of the first 100 natural numbers */
-const sosq = () => natNums(100).reduce((a, b) => a + Math.pow(b, 2), 0);
+const sosq = () => MathUtils.naturals(100).reduce((a, b) => a + Math.pow(b, 2), 0);
 
 /* square of the sum of the first 100 natural numbers */
-const sqos = () => Math.pow(natNums(100).reduce((a, b) => a + b, 0), 2);
+const sqos = () => Math.pow(MathUtils.naturals(100).reduce((a, b) => a + b, 0), 2);
 
 console.log(`Result: ${sqos() - sosq()}`);

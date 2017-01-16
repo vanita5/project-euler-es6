@@ -4,25 +4,12 @@
  * What is the 10001st prime number?
  */
 
-const isPrime = n => {
-    for (let i = 2; i < Math.sqrt(n) + 1; i++) {
-        if (n % i === 0) return false;
-    }
-    return n > 1;
-};
-
-const nextPrime = n => {
-    /* eslint-disable no-constant-condition */
-    while (true) {
-        n++;
-        if (isPrime(n)) return n;
-    }
-};
+import MathUtils from '../utils/math';
 
 const nthPrime = n => {
     let p = 2;
     for (let i = 1; i < n; i++) {
-        p = nextPrime(p);
+        p = MathUtils.nextPrime(p);
     }
     return p;
 };
