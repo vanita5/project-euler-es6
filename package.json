@@ -49,6 +49,9 @@
       ],
       "import/no-unresolved": [
         "off"
+      ],
+      "unicorn/no-abusive-eslint-disable": [
+        "off"
       ]
     }
   },
