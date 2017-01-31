@@ -114,6 +114,22 @@ class MathUtils {
         return MathUtils.collatz((3 * n) + 1, [...r, ...[(3 * n) + 1]]);
     }
 
+    /**
+     * Check if n is pandigital
+     *
+     * @param n
+     * @return {boolean}
+     */
+    static isPandigital(n) {
+        const _s = String(n);
+        if (_s === null || _s.length > 9) return false;
+
+        for (let i = 1; i <= _s.length; i++) {
+            if (!_s.includes(String(i))) return false;
+        }
+        return true;
+    }
+
 }
 
 export default MathUtils;
